@@ -36,8 +36,8 @@ The dataset consists of two subsets, medical and general, each containing 1,000 
 ```
 
 ## Citation
-* Koki Horiguchi, Seiji Sugiyama, Tomoyuki Kajiwara, Shoko Wakamiya, Eiji Aramaki.
-JMedWiC: A Japanese Word-in-Context Dataset in the Medical Domain.
+* Koki Horiguchi, Seiji Sugiyama, Tomoyuki Kajiwara, Shoko Wakamiya, Eiji Aramaki.  
+JMedWiC: A Japanese Word-in-Context Dataset in the Medical Domain.  
 Clinical NLP Workshop 2026. Mallorca, Spain. May 2026. [to appear]
 
 * 堀口 航輝, 杉山 誠治, 梶原 智之, 若宮 翔子, 荒牧 英治.  
