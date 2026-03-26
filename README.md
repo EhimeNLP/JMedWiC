@@ -1,28 +1,30 @@
+[English](README.md) | [日本語(Japanese)](README-ja.md)
 # JMedWiC
 
-## 概要
-マスク言語モデルを用いて擬似的な同義・非同義ペアを自動抽出し，人手による同義性アノテーションを通じてラベルを決定することで，日本語の医療分野における語義同一性判定データセットを構築しました．
-本データセットは，医療ドメインを対象とする **medical** と，一般ドメインを対象とする **general** の2つのサブセットから構成され，それぞれが1,000件となっています．
+## Overview
 
-## データセット構成
+JMedWiC is a Japanese dataset for Word-in-Context (WiC) tasks specifically focused on the medical domain. The dataset was constructed by automatically extracting candidate synonym/non-synonym pairs using Masked Language Models (MLM) and assigning gold labels through human annotation.
+The dataset consists of two subsets, medical and general, each containing 1,000 pairs.
 
-| サブセット | 件数 | 対象語彙 | テキストコーパス |
+## Dataset Composition
+
+| Subset | Instances | Target Vocabulary | Text Corpus |
 |----------|------|---------|---------|
 | medical  | 1,000 | [JMED-DICT](https://sip3-d2.naist.jp/jmed-dict.html) | [Wikipedia](https://huggingface.co/datasets/range3/wiki40b-ja) + [MSDマニュアル](https://www.msdmanuals.com)※ |
-| general  | 1,000 | [BCCWJ語彙表](https://repository.ninjal.ac.jp/records/3234) | Wikipedia |
+| general  | 1,000 | [BCCWJ Vocabulary List](https://repository.ninjal.ac.jp/records/3234) | Wikipedia |
 
-※ MSDマニュアルからスクレイピングしたテキストは，医療特化LLMによりパラフレーズしています．
+※ Text scraped from the MSD Manual has been paraphrased using a medical-domain specialized LLM.
 
-## データ形式
+## Data Format
 
-- `term`: 対象単語
-- `context1`: 文脈1
-- `context2`: 文脈2
-- `label`: 語義同一性ラベル（true=同義, false=非同義）
-- `span1`: 文脈1における対象単語の文字位置 [開始位置, 終了位置]
-- `span2`: 文脈2における対象単語の文字位置 [開始位置, 終了位置]
+- `term`: The target word
+- `context1`: The first sentence containing the target word.
+- `context2`: The second sentence containing the target word.
+- `label`: A boolean indicating word sense identity (`true` = synonymous, `false` = non-synonymous).
+- `span1`: The character indices for the target word in `context1` [`start`, `end`].
+- `span2`: The character indices for the target word in `context2` [`start`, `end`].
 
-## データ例
+## Example
 ```
 {"term": "隆起",  
  "context1": "当時の窟は海に面していたが、関東大震災による土地の隆起で現在の高さとなった。",  
@@ -33,7 +35,11 @@
 }
 ```
 
-## 文献情報
+## Citation
+* Koki Horiguchi, Seiji Sugiyama, Tomoyuki Kajiwara, Shoko Wakamiya, Eiji Aramaki.
+JMedWiC: A Japanese Word-in-Context Dataset in the Medical Domain.
+Clinical NLP Workshop 2026. Mallorca, Spain. May 2026. [to appear]
+
 * 堀口 航輝, 杉山 誠治, 梶原 智之, 若宮 翔子, 荒牧 英治.  
   JMedWiC：日本語医療分野の語義同一性判定データセット.  
   言語処理学会第32回年次大会, pp.3009-3013, March 2026. \[[PDF](https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/Q6-23.pdf)\]  
