@@ -34,7 +34,16 @@ The dataset consists of two subsets, medical and general, each containing 1,000 
  "span2": [7, 9]  
 }
 ```
+## Versions
 
+This repository contains two versions of the dataset.
+
+- **v1**: Dataset released at the Annual Meeting of the Association for Natural Language Processing
+  - Files: v1/ (e.g., `jmedwic_medical_v1.jsonl`, `jmedwic_general_v1.jsonl`)
+
+- **v2**: Dataset released at Clinical NLP Workshop 2026
+  - Files: v2/ (e.g., `jmedwic_medical_v2.jsonl`, `jmedwic_general_v2.jsonl`)
+  
 ## Citation
 * Koki Horiguchi, Seiji Sugiyama, Tomoyuki Kajiwara, Shoko Wakamiya, Eiji Aramaki.  
 JMedWiC: A Japanese Word-in-Context Dataset in the Medical Domain.  

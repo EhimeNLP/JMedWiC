@@ -33,6 +33,16 @@
 }
 ```
 
+## バージョン
+
+本リポジトリには2つのバージョンのデータを収録しています。
+
+- **v1**: 言語処理学会（年次大会）で公開したデータセット
+  - 収録ファイル: v1/ （例: `jmedwic_medical_v1.jsonl`, `jmedwic_general_v1.jsonl`）
+
+- **v2**: Clinical NLP Workshop 2026 で公開したデータセット
+  - 収録ファイル: v2/（例: `jmedwic_medical_v2.jsonl`, `jmedwic_general_v2.jsonl`）
+
 ## 文献情報
 * Koki Horiguchi, Seiji Sugiyama, Tomoyuki Kajiwara, Shoko Wakamiya, Eiji Aramaki.  
 JMedWiC: A Japanese Word-in-Context Dataset in the Medical Domain.  
